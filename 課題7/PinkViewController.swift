@@ -1,9 +1,3 @@
-//
-//  PinkViewController.swift
-//  課題7
-//
-//  Created by 鎌田剛史 on R 5/07/23.
-//
 
 import UIKit
 
@@ -14,8 +8,12 @@ class PinkViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     @IBAction func pressButton(_ sender: Any) {
-        let num1 = ((textField.text ?? "") as NSString).integerValue
-        let num2 = ((textField2.text ?? "") as NSString).integerValue
+        guard let num1 = Int(textField.text ?? "") else {
+            return
+        }
+        guard let num2 = Int(textField2.text ?? "") else {
+            return
+        }
         
         let result = num1 + num2
         label.text = "\(result)"
