@@ -3,11 +3,11 @@ import UIKit
 
 class PinkViewController: UIViewController {
 
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var textField2: UITextField!
-    @IBOutlet weak var label: UILabel!
-    
-    @IBAction func pressButton(_ sender: Any) {
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var textField2: UITextField!
+    @IBOutlet private weak var label: UILabel!
+
+    @IBAction private func pressButton(_ sender: Any) {
         guard let num1 = Int(textField.text ?? "") else {
             return
         }
